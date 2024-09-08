@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Franquias da NFL</title>
+</head>
+
+<body>
+    <header>
+        <h1>História das franquias da NFL</h1>
+    </header>
+    <main>
+        <section>
+            <input type="text" placeholder="Pesquise aqui assuntos relacionados às franquias" id="campo-pesquisa">
+            <button onclick="pesquisar()">Pesquisar</button>
+        </section>
+        <section class="resultados-pesquisa" 
+        id="resultados-pesquisa">
+        </section>
+        
+        <script>
+            // Obtém o elemento do campo de pesquisa
+            const campoPesquisa = document.getElementById('campo-pesquisa');
+        
+            // Adiciona um ouvinte de evento para a tecla Enter
+            campoPesquisa.addEventListener('keypress', function(event) {
+                // Verifica se a tecla pressionada é Enter (código 13)
+                if (event.key === 'Enter') {
+                    pesquisar(); // Chama a função de pesquisa
+                }
+            });
+        
+            // Sua função de pesquisa (exemplo)
+            function pesquisar() {
+                const termoPesquisa = campoPesquisa.value;
+                // Aqui você implementaria a lógica da sua pesquisa
+                console.log('Você pesquisou por:', termoPesquisa);
+            }
+        </script>
+    </main>
+    <footer>
+        <p>2024 - Franquias da NFL - Eliel Moraes</p>
+    </footer>
+    <script src="dados.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
